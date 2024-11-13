@@ -77,7 +77,7 @@ const landmarks = [
 
 function GridLayout() {
   return (
-    <Box sx={{ width: "100%", padding: "20px" }}>
+    <Box sx={{ width: "100%"}}>
       <Typography
         variant="h4"
         color="primary"

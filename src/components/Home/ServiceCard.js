@@ -42,10 +42,11 @@ const ServiceCard = ({ icon, title, description }) => {
     <GradientBorderCard
       variant="outlined"
       sx={{
-        maxWidth: 300, // Smaller max width
-        maxHeight: 200, // Smaller max height
+        maxWidth: "16rem", // Smaller max width
+        maxHeight: "13rem", // Smaller max height
         padding: "1rem", // Reduced padding
         textAlign: "center",
+        borderRadius:"5rem",
         margin: "auto", // Ensures card is centered within its Grid item
       }}
     >
@@ -58,7 +59,7 @@ const ServiceCard = ({ icon, title, description }) => {
         >
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{padding:"0.3rem"}}>
           {description}
         </Typography>
       </CardContent>

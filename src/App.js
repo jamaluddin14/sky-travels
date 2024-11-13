@@ -1,20 +1,24 @@
-import logo from "./logo.svg";
-import "./App.css";
-import theme from "./theme";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import CustomTextField from "./components/Auth/TextField";
-import CustomButton from "./components/Auth/Button";
-import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register";
-import Auth from "./components/Auth";
-import TravelGallery from "./components/Home/TravelGallery";
+import theme from "./theme";
 import Home from "./components/Home";
-import ImageCard from "./components/Home/TourImageCard";
-import GridLayout from "./components/Home/Explore";
+import About from "./components/About";
+import Tours from "./components/Tours";
+import Auth from "./components/Auth";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/tours" element={<Tours />} />
+          <Route path="/auth/:type" element={<Auth />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }

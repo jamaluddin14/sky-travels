@@ -47,10 +47,8 @@ const ServicesSection = () => {
             We offer our best services
           </Typography>
         </Grid>
-
-        {/* Cards Section */}
         <Grid item xs={12} md={8}>
-          <Grid container spacing={0.5} justifyContent="center">
+          <Grid container spacing={2} justifyContent="center">
             {services.map((service, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <ServiceCard

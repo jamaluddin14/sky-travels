@@ -4,12 +4,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
-function ImageCard({ src, title, subtitle }) {
+function ImageCard({ src, title, subtitle,width,height }) {
   // Inline styles for dynamic changes
   const cardStyle = {
     position: "relative",
-    width: "auto",
-    height: "auto",
+    width: width||"auto",
+    height: height||"auto",
     overflow: "hidden",
     transition: "transform 0.3s ease", // Adding transition for the card
     "&:hover": {
